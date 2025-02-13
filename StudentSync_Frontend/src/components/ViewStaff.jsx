@@ -16,7 +16,7 @@ import {Box,Button,Card,CardActions,CardContent,Typography} from "@mui/material"
   
      function fetch_data(){
       axiosInstance
-      .get("http://localhost:7000/staff/display-staff")
+      .get("https://studentsync-render-backend.onrender.com/staff/display-staff")
       .then((res) => {
         setCardData(res.data);
       })
@@ -34,7 +34,7 @@ import {Box,Button,Card,CardActions,CardContent,Typography} from "@mui/material"
   
     function delete_staff(item) {
       axiosInstance
-        .delete(`http://localhost:7000/staff/delete-staff/${item._id}`)
+        .delete(`https://studentsync-render-backend.onrender.com/staff/delete-staff/${item._id}`)
         .then((res) => {
           setCardData((cardData) => cardData.filter((staff) => staff._id !== item._id));
           

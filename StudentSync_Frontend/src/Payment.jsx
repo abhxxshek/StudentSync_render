@@ -15,7 +15,7 @@ const Payment = () => {
   const updateFeeStatus = () => {
   if(responseId){
     axiosInstance
-    .put("http://localhost:7000/student/fee-paid")
+    .put("https://studentsync-render-backend.onrender.com/student/fee-paid")
     .then((res) => {
       alert(res.data.message);
     })
@@ -55,7 +55,7 @@ useEffect(() => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://localhost:7000/payments/orders",
+      url: "https://studentsync-render-backend.onrender.com/payments/orders",
       headers: {
         "Content-Type": "application/json",
       },
@@ -114,7 +114,7 @@ useEffect(() => {
 
     const paymentId = e.target.paymentId.value;
     axiosInstance
-      .get(`http://localhost:7000/payments/paymentId/${paymentId}`)
+      .get(`https://studentsync-render-backend.onrender.com/payments/paymentId/${paymentId}`)
       .then((res) => {
         console.log(res.data);
         setResponseState(res.data);

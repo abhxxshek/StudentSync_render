@@ -18,7 +18,7 @@ const ViewMarks = () => {
     },[])
 
     function fetch_data(){
-      axiosInstance.get(`http://localhost:7000/marks/display-marks/${location.state.studentItem._id}`).then((res)=>{
+      axiosInstance.get(`https://studentsync-render-backend.onrender.com/marks/display-marks/${location.state.studentItem._id}`).then((res)=>{
         setMarks(res.data);
     }).catch((error)=>{
         alert("Cannot fetch mark details !");
@@ -36,7 +36,7 @@ const ViewMarks = () => {
       }
 
       function delete_marks(item){
-        axiosInstance.delete(`http://localhost:7000/marks/delete-marks/${item._id}`).then((res)=>{
+        axiosInstance.delete(`https://studentsync-render-backend.onrender.com/marks/delete-marks/${item._id}`).then((res)=>{
           fetch_data()
         }).catch((error)=>{
           alert("Cannot delete the marks!");

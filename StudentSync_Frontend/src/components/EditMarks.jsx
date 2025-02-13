@@ -40,7 +40,7 @@ const EditMarks = () => {
           total_percentage: calculatePercentage(),
         };
         axiosInstance
-          .put(`http://localhost:7000/marks/edit-marks/${location.state.item._id}`, updatedMarks)
+          .put(`https://studentsync-render-backend.onrender.com/marks/edit-marks/${location.state.item._id}`, updatedMarks)
           .then((res) => {
             alert(res.data.message);
             navigate("/marks");

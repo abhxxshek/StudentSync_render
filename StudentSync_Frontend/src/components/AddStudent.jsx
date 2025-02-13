@@ -38,7 +38,7 @@ const AddStudent = () => {
 
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:7000/classes/staff/class")
+      .get("https://studentsync-render-backend.onrender.com/classes/staff/class")
       .then((res) => {
         setClassData(res.data);
       })
@@ -56,7 +56,7 @@ const AddStudent = () => {
     if (location.state != null) {
       axiosInstance
         .put(
-          `http://localhost:7000/student/update-student/${location.state.item._id}`,
+          `https://studentsync-render-backend.onrender.com/student/update-student/${location.state.item._id}`,
           updatedForm
         )
         .then((res) => {
@@ -68,7 +68,7 @@ const AddStudent = () => {
         });
     } else {
       axiosInstance
-        .post("http://localhost:7000/student/add-student", updatedForm)
+        .post("https://studentsync-render-backend.onrender.com/student/add-student", updatedForm)
         .then((res) => {
           alert(res.data.message);
           navigate("/viewStudent");

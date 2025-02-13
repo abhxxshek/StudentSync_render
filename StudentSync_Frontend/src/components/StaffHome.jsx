@@ -23,7 +23,7 @@ const StaffHome = () => {
 
   function fetch_data() {
     axiosInstance
-      .get("http://localhost:7000/announcement/admin/display-announcements")
+      .get("https://studentsync-render-backend.onrender.com/announcement/admin/display-announcements")
       .then((res) => {
         setAnnouncementData(res.data);
       })
@@ -37,7 +37,7 @@ const StaffHome = () => {
 
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:7000/student/assignedClass-count-student")
+      .get("https://studentsync-render-backend.onrender.com/student/assignedClass-count-student")
       .then((res) => {
         setStudentCount(res.data.studentCount);
       })
@@ -51,7 +51,7 @@ const StaffHome = () => {
 
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:7000/profile/display-user")
+      .get("https://studentsync-render-backend.onrender.com/profile/display-user")
       .then((res) => {
         setUserData(res.data);
       })
@@ -64,7 +64,7 @@ const StaffHome = () => {
   //---------fee pending status---------------
   function send_pending_remainder() {
     axiosInstance
-      .put("http://localhost:7000/student/fee-status-pending")
+      .put("https://studentsync-render-backend.onrender.com/student/fee-status-pending")
       .then((res) => {
         alert(res.data.message);
         fetch_studentData();
@@ -79,7 +79,7 @@ const StaffHome = () => {
   //---------fee paid status---------------
   function send_paid_status() {
     axiosInstance
-      .put("http://localhost:7000/student/fee-status-paid")
+      .put("https://studentsync-render-backend.onrender.com/student/fee-status-paid")
       .then((res) => {
         alert(res.data.message);
         fetch_studentData()
@@ -98,7 +98,7 @@ const StaffHome = () => {
   },[])
 
   function fetch_studentData(){
-    axiosInstance.get('http://localhost:7000/student/staff-students-fee-status').then((res)=>{
+    axiosInstance.get('https://studentsync-render-backend.onrender.com/student/staff-students-fee-status').then((res)=>{
         setStudentData(res.data);
     }).catch((error)=>{
         alert("Student fee status fetching failed !");

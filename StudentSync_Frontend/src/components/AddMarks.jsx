@@ -40,7 +40,7 @@ const AddMarks = () => {
       total_percentage: calculatePercentage(),
     };
     axiosInstance
-      .post("http://localhost:7000/marks/add-marks", updatedMarks)
+      .post("https://studentsync-render-backend.onrender.com/marks/add-marks", updatedMarks)
       .then((res) => {
         alert(res.data.message);
         navigate("/marks");

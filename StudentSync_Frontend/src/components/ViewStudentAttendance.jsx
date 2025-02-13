@@ -8,7 +8,7 @@ const ViewStudentAttendance = () => {
     const[attendanceData,setAttendanceData]=useState([]);
 
     useEffect(()=>{
-        axiosInstance.get('http://localhost:7000/attendance/display-student-attendance').then((res)=>{
+        axiosInstance.get('https://studentsync-render-backend.onrender.com/attendance/display-student-attendance').then((res)=>{
             setAttendanceData(res.data);
 
         }).catch((error)=>{

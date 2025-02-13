@@ -26,7 +26,7 @@ const StaffChat = () => {
   }, []);
   function fetchChats() {
     axiosInstance
-      .get("http://localhost:7000/chat/staff/display-chat")
+      .get("https://studentsync-render-backend.onrender.com/chat/staff/display-chat")
       .then((res) => {
         setChat(res.data);
       })
@@ -39,7 +39,7 @@ const StaffChat = () => {
   function sendReply(item) {
     
     axiosInstance
-      .put(`http://localhost:7000/chat/reply/${item._id}`,{ answer: reply[item._id] })
+      .put(`https://studentsync-render-backend.onrender.com/chat/reply/${item._id}`,{ answer: reply[item._id] })
       .then((res) => {
         
         fetchChats();

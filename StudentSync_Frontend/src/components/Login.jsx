@@ -21,7 +21,7 @@ const Login = () => {
   function capvalue() {
     if (validate()) {
       axios
-        .post("http://localhost:7000/login/check-user", form)
+        .post("https://studentsync-render-backend.onrender.com/login/check-user", form)
         .then((res) => {
           alert(res.data.message);
           if (res.data.token) {

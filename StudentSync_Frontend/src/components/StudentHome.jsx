@@ -25,7 +25,7 @@ const StudentHome = () => {
 
   function fetch_data() {
     axiosInstance
-      .get("http://localhost:7000/announcement/student/display-announcements")
+      .get("https://studentsync-render-backend.onrender.com/announcement/student/display-announcements")
       .then((res) => {
          
         setAnnouncementData(res.data);
@@ -40,7 +40,7 @@ const StudentHome = () => {
 
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:7000/attendance/display-student-attendance-count")
+      .get("https://studentsync-render-backend.onrender.com/attendance/display-student-attendance-count")
       .then((res) => {
         setDayCount(res.data.present);
       })
@@ -53,7 +53,7 @@ const StudentHome = () => {
   const[absent,setAbsent]=useState(0);
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:7000/attendance/display-student-attendance-count")
+      .get("https://studentsync-render-backend.onrender.com/attendance/display-student-attendance-count")
       .then((res) => {
         setAbsent(res.data.absent);
       })
@@ -67,7 +67,7 @@ const StudentHome = () => {
 
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:7000/profile/display-user")
+      .get("https://studentsync-render-backend.onrender.com/profile/display-user")
       .then((res) => {
         setUserData(res.data);
       })

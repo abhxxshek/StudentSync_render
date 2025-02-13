@@ -127,7 +127,7 @@ const Header = () => {
 
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:7000/login/username")
+      .get("https://studentsync-render-backend.onrender.com/login/username")
       .then((res) => {
         setUserData(res.data);
       })

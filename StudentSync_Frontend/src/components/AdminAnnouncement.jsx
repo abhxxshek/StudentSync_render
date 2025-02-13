@@ -44,7 +44,7 @@ const AdminAnnouncement = () => {
 
       axiosInstance
         .post(
-          "http://localhost:7000/announcement/add-announcements",
+          "https://studentsync-render-backend.onrender.com/announcement/add-announcements",
           updatedAnnouncement
         )
         .then((res) => {
@@ -66,7 +66,7 @@ const AdminAnnouncement = () => {
 
   function fetch_data() {
     axiosInstance
-      .get("http://localhost:7000/announcement/admin/display-announcements")
+      .get("https://studentsync-render-backend.onrender.com/announcement/admin/display-announcements")
       .then((res) => {
         setAnnouncementData(res.data);
       })
@@ -93,7 +93,7 @@ const AdminAnnouncement = () => {
   }
 
   function delete_announcement(item){
-    axiosInstance.delete(`http://localhost:7000/announcement/delete-announcement/${item._id}`).then((res)=>{
+    axiosInstance.delete(`https://studentsync-render-backend.onrender.com/announcement/delete-announcement/${item._id}`).then((res)=>{
         alert(res.data.message);
         fetch_data()
     })

@@ -17,7 +17,7 @@ const AddClass = () => {
   }, []);
 
   function fetch_data(){
-    axiosInstance.get("http://localhost:7000/classes/display-class").then((res) =>{
+    axiosInstance.get("https://studentsync-render-backend.onrender.com/classes/display-class").then((res) =>{
       setClassData(res.data)})
       .catch((error) => {
        console.error("Error fetching classes:", error)});
@@ -31,7 +31,7 @@ const AddClass = () => {
 
 
   function delete_class(classItem){
-    axiosInstance.delete(`http://localhost:7000/classes/delete-class/${classItem._id}`).then((res)=>{
+    axiosInstance.delete(`https://studentsync-render-backend.onrender.com/classes/delete-class/${classItem._id}`).then((res)=>{
       alert(res.data.message);
       fetch_data();
       navigate('/class')

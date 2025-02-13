@@ -22,7 +22,7 @@ const AdminHome = () => {
 
   function fetch_data() {
     axiosInstance
-      .get("http://localhost:7000/announcement/admin/display-announcements")
+      .get("https://studentsync-render-backend.onrender.com/announcement/admin/display-announcements")
       .then((res) => {
         setAnnouncementData(res.data);
       })
@@ -35,7 +35,7 @@ const AdminHome = () => {
   const[staffCount,setStaffCount]=useState(0);
 
   useEffect(()=>{
-    axiosInstance.get('http://localhost:7000/staff/count-staff').then((res)=>{
+    axiosInstance.get('https://studentsync-render-backend.onrender.com/staff/count-staff').then((res)=>{
         setStaffCount(res.data.staffCount);
     }).catch((error)=>{
         alert("Cannot fetch the count of staffs!");
@@ -46,7 +46,7 @@ const AdminHome = () => {
   const[studentCount,setStudentCount]=useState(0);
 
   useEffect(()=>{
-    axiosInstance.get('http://localhost:7000/student/count-student').then((res)=>{
+    axiosInstance.get('https://studentsync-render-backend.onrender.com/student/count-student').then((res)=>{
         setStudentCount(res.data.studentCount);
     }).catch((error)=>{
         alert("Cannot fetch the count of student!");
@@ -57,7 +57,7 @@ const AdminHome = () => {
   const[classCount,setClassCount]=useState(0);
 
   useEffect(()=>{
-    axiosInstance.get('http://localhost:7000/classes/count-class').then((res)=>{
+    axiosInstance.get('https://studentsync-render-backend.onrender.com/classes/count-class').then((res)=>{
         setClassCount(res.data.classCount);
     }).catch((error)=>{
         alert("Cannot fetch the count of class!");
@@ -70,7 +70,7 @@ const AdminHome = () => {
 
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:7000/profile/display-user")
+      .get("https://studentsync-render-backend.onrender.com/profile/display-user")
       .then((res) => {
         setUserData(res.data);
       })

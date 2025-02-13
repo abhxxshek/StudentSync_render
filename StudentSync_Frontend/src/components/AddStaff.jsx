@@ -40,7 +40,7 @@ const AddStaff = () => {
 
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:7000/classes/display-class")
+      .get("https://studentsync-render-backend.onrender.com/classes/display-class")
       .then((res) => {
         setClassData(res.data);
       })
@@ -54,7 +54,7 @@ const AddStaff = () => {
     if (location.state != null) {
       axiosInstance
         .put(
-          `http://localhost:7000/staff/update-staff/${location.state.item._id}`,
+          `https://studentsync-render-backend.onrender.com/staff/update-staff/${location.state.item._id}`,
           form
         )
         .then((res) => {
@@ -66,7 +66,7 @@ const AddStaff = () => {
         });
     } else {
       axiosInstance
-        .post("http://localhost:7000/staff/add-staff", form)
+        .post("https://studentsync-render-backend.onrender.com/staff/add-staff", form)
         .then((res) => {
           alert(res.data.message);
           navigate("/viewStaff");

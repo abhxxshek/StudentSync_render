@@ -9,7 +9,7 @@ const Marks = () => {
 
      useEffect(() => {
         axiosInstance
-          .get("http://localhost:7000/student/staff-students")
+          .get("https://studentsync-render-backend.onrender.com/student/staff-students")
           .then((res) => {
             setStudentData(res.data);
           })

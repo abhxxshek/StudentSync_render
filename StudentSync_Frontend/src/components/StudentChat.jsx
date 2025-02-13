@@ -33,7 +33,7 @@ const StudentChat = () => {
 
   function fetch_data(){
     axiosInstance
-      .get("http://localhost:7000/chat/student/display-chat")
+      .get("https://studentsync-render-backend.onrender.com/chat/student/display-chat")
       .then((res) => {
         setChat(res.data);
       })
@@ -44,7 +44,7 @@ const StudentChat = () => {
   }
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:7000/student/student-chat")
+      .get("https://studentsync-render-backend.onrender.com/student/student-chat")
       .then((res) => {
         // console.log("Fetched student data:", res.data);
         setData(res.data);
@@ -64,7 +64,7 @@ const StudentChat = () => {
     if(validate()){
 
     axiosInstance
-      .post("http://localhost:7000/chat/new-chat", updatedQuestion)
+      .post("https://studentsync-render-backend.onrender.com/chat/new-chat", updatedQuestion)
       .then((res) => {
         
         setQuestion((prev) => ({

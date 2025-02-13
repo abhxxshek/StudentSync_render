@@ -25,7 +25,7 @@ const ViewVideos = () => {
 
   function fetch_data(){
     axiosInstance
-      .get("http://localhost:7000/videos/display-videos")
+      .get("https://studentsync-render-backend.onrender.com/videos/display-videos")
       .then((res) => {
         setCardData(res.data);
       })
@@ -40,7 +40,7 @@ const ViewVideos = () => {
   }
 
   function delete_video(item){
-    axiosInstance.delete(`http://localhost:7000/videos/delete-videos/${item._id}`).then((res)=>{
+    axiosInstance.delete(`https://studentsync-render-backend.onrender.com/videos/delete-videos/${item._id}`).then((res)=>{
         
         fetch_data()
     }).catch((error)=>{

@@ -16,7 +16,7 @@ const AddVideos = () => {
 
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:7000/classes/staff/class")
+      .get("https://studentsync-render-backend.onrender.com/classes/staff/class")
       .then((res) => {
         setClassData(res.data);
       })
@@ -34,7 +34,7 @@ const AddVideos = () => {
     if (location.state != null) {
       axiosInstance
         .put(
-          `http://localhost:7000/videos/update-videos/${location.state.item._id}`,
+          `https://studentsync-render-backend.onrender.com/videos/update-videos/${location.state.item._id}`,
           updatedForm
         )
         .then((res) => {
@@ -47,7 +47,7 @@ const AddVideos = () => {
         });
     } else {
       axiosInstance
-        .post("http://localhost:7000/videos/add-videos", updatedForm)
+        .post("https://studentsync-render-backend.onrender.com/videos/add-videos", updatedForm)
         .then((res) => {
           alert(res.data.message);
           navigate("/viewVideos");

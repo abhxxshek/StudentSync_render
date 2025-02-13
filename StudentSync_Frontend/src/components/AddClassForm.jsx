@@ -51,7 +51,7 @@ const AddClassForm = () => {
       if (location.state != null) {
         axiosInstance
           .put(
-            `http://localhost:7000/classes/update-class/${location.state.classItem._id}`,
+            `https://studentsync-render-backend.onrender.com/classes/update-class/${location.state.classItem._id}`,
             form
           )
           .then((res) => {
@@ -67,7 +67,7 @@ const AddClassForm = () => {
           });
       } else {
         axiosInstance
-          .post("http://localhost:7000/classes/add-class", form)
+          .post("https://studentsync-render-backend.onrender.com/classes/add-class", form)
           .then((res) => {
             alert(res.data.message);
             
