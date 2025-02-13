@@ -1,0 +1,82 @@
+/* ---------------------------login page------------------------------- */
+.login_box{
+    background-color: rgba(255, 255, 255, 0.249);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 0px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7%;
+    width: 350px;
+    height:400px;
+    
+}
+
+.login_btn:hover{
+    color:black;
+    background-color:  rgba(194, 145, 198, 0.5) !important;
+}
+
+/* -----------------------------staff form--------------------------------  */
+.addStaff_frm{
+    background-color: rgba(255, 255, 255, 0.249);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 0px solid white;
+    border-radius: 10px;
+    padding: 3% 3% 2% 3%;
+    width: 90%;
+    /* max-width: 500px; */
+    margin: 5% auto;
+    box-sizing: border-box;
+
+}
+
+/* -----------------------------student form--------------------------------  */
+.addStudent_frm{
+    background-color: rgba(255, 255, 255, 0.249);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 0px solid white;
+    border-radius: 10px;
+    padding: 3% 3% 2% 3%;
+    width: 90%;
+    /* max-width: 500px; */
+    margin: 5% auto;
+    box-sizing: border-box;
+    
+}
+
+/* ---------------------------------scrolling animation dashboard--------------------------- */
+.scrolling-content {
+    display: block;
+    animation: scrollUp 10s linear infinite; /* Adjust speed */
+  }
+  
+  @keyframes scrollUp {
+    0% {
+      transform: translateY(90%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  .scrolling-content:hover {
+    animation-play-state: paused;
+  }
+
+
+  /* media query for dashboards */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .profile-container {
+      width: 95% !important;
+      height: auto;
+      
+    }
+  }
+  
+    
