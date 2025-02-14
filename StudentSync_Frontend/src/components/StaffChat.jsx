@@ -113,7 +113,7 @@ const StaffChat = () => {
                     }}
                   >
                     <div >
-                      <strong>Student ({item.student_id.name}):</strong>&nbsp;{"  "}
+                      <strong>{item.student_id.name}:</strong>&nbsp;{"  "}
                       <span style={{ color: "white" }}>{item.question}</span>
                       {item.answer ? (
                         <p>
