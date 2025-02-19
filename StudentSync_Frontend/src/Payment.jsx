@@ -84,7 +84,7 @@ useEffect(() => {
 
     const options = {
       key: import.meta.env.VITE_KEYID,
-      amount: amount,
+      amount: 1000000,
       currency: "INR",
       name: "Fee Payment",
       description: "Payment to StudentSync",
@@ -211,7 +211,7 @@ useEffect(() => {
           </Button>
           {responseState.length !== 0 && (
             <Box sx={{margin:"5px auto",width:"14%"}}>
-              <Typography sx={{paddingTop:"10px"}}>Amount: &nbsp;{responseState.amount * 100} </Typography>
+              <Typography sx={{paddingTop:"10px"}}>Amount: &nbsp;{responseState.amount /100} </Typography>
               <Typography >currency: &nbsp;{responseState.currency}  </Typography>
               <Typography >Status: &nbsp;{responseState.status}  </Typography>
               <Typography>Method:  &nbsp;{responseState.method}</Typography>
